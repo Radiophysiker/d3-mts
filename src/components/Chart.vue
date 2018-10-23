@@ -9,7 +9,7 @@
       @change="drawChart(selectedMin, selectedMax)">
       <el-option
         v-for="item in data.filter((d) => {
-          (d.date.getTime() < (new Date(moment(selectedMax).add(-6, 'months'))).getTime())
+          return d.date.getTime() < (new Date(moment(selectedMax).add(-6, 'months'))).getTime()
         })"
         :key="String(item.date)"
         :label="moment(item.date).format('MMMM YYYY')"
