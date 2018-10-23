@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     Chart: () => import('@/components/Chart.vue'),
   },
-}
+};
 </script>
 
 <style>
